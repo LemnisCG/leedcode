@@ -1,100 +1,45 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formas en Diagramas de Flujo</title>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Favorite fruit start</title>
     <style>
-        .forma {
-            display: inline-block;
-            text-align: center;
-            font-size: 16px;
-            padding: 10px;
-            margin: 20px;
-        }
-        
-        .rectangulo {
-            width: 150px;
-            height: 80px;
-            background-color: lightblue;
-            border: 2px solid black;
-        }
+      input:invalid {
+        border: 2px dashed rgb(104, 61, 61);
+      }
 
-        .paralelogramo {
-            width: 150px;
-            height: 80px;
-            background-color: lightgreen;
-            clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
-            border: 2px solid black;
-        }
+      input:required {
+        background-image: linear-gradient(to right, pink, lightgreen);
+      }
 
-        .proceso-predefinido {
-            width: 150px;
-            height: 80px;
-            background-color: lightyellow;
-            border: 2px solid black;
-            border-left-width: 4px;
-            border-right-width: 4px;
-        }
-
-        .terminal {
-            width: 150px;
-            height: 80px;
-            background-color: lightcoral;
-            border-radius: 50%;
-            border: 2px solid black;
-        }
-
-        .decision {
-            width: 100px;
-            height: 100px;
-            background-color: lightpink;
-            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-            border: 2px solid black;
-        }
-
-        .preparacion {
-            width: 150px;
-            height: 80px;
-            background-color: lightgray;
-            clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
-            border: 2px solid black;
-        }
-
-        .pantalla {
-            width: 150px;
-            height: 80px;
-            background-color: lightseagreen;
-            clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
-            border: 2px solid black;
-        }
-
-        .conector {
-            width: 40px;
-            height: 40px;
-            background-color: lightgoldenrodyellow;
-            border-radius: 50%;
-            border: 2px solid black;
-        }
-
-        .conector-pagina {
-            width: 40px;
-            height: 40px;
-            background-color: lightblue;
-            border-radius: 50%;
-            border: 2px solid black;
-        }
+      input:valid {
+        border: 2px solid black;
+      }
     </style>
-</head>
-<body>
-    <div class="forma rectangulo">Proceso</div>
-    <div class="forma paralelogramo">Datos</div>
-    <div class="forma proceso-predefinido">Proceso Predefinido</div>
-    <div class="forma terminal">Terminal</div>
-    <div class="forma decision">Decisión</div>
-    <div class="forma preparacion">Preparación</div>
-    <div class="forma pantalla">Pantalla</div>
-    <div class="forma conector">Conector</div>
-    <div class="forma conector-pagina">Conector de Página</div>
+  </head>
+
+<body>  
+    <form>
+        <div>
+          <label for="choose">Would you prefer a banana or a cherry?</label>
+          <input
+            type="text"
+            id="choose"
+            name="i-like"
+            required
+            minlength="6"
+            maxlength="6" />
+        </div>
+        <div>
+          <label for="number">How many would you like?</label>
+          <input type="number" id="number" name="amount" value="1" min="1" max="10" />
+        </div>
+        <div>
+          <button>Submit</button>
+        </div>
+      </form>
+      
 </body>
+
 </html>
